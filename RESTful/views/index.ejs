@@ -1,0 +1,16 @@
+<%include ./partials/header %> 
+
+
+<div class="ui container" >
+    <header class="ui header">Hot Posts</header>
+    <div class="ui main text container segment">
+        <%posts.forEach(function(post){%>
+            <h2> <%=post.title%> </h2>
+            <img src="<%=post.image%>">
+            <p> <%=post.body.substring(1, 100)%>. . .</p>
+            <span><%=post.created.toDateString()%></span>
+            <a href="/posts/<%= post._id %>">Read More</a>
+        <% }) %>
+    </div>
+</div>
+<%include ./partials/footer %>

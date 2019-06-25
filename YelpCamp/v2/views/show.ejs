@@ -1,0 +1,12 @@
+<% include partials/header %>
+
+<h1> <%=camp.name %> </h1>
+<image class = "" src="<%=camp.image%> "
+
+<p>
+    <% if ( camp.description == " " ) { %>
+        <p>NO description is provided</p>
+    <% } else { %>
+        <%= camp.description %>
+    <% } %>
+</p>
